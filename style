@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,700&family=Ultra&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+	padding: 0;
+    text-decoration: none;
+}
+body{
+    margin: 0;
+   
+    font-family: 'Roboto', sans-serif;
+    
+    
+}
+/*Nav Bar*/
+header{
+    width: 100%;
+    height: 100px;
+    font-family:'ultra', sans-serif;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    
+}
+
+.container-header{
+    max-width: 1200px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 0 , 20px;
+
+}
+header .header-logo{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-logo img {
+    width: 150px;
+}
+
+.container-nav{
+    position: relative;
+    height: 100%;
+}
+
+ nav{
+    height: 100%;
+ }
+
+ nav ul{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+  
+ nav ul li {
+  margin: 0px 20px;
+    list-style: none ;
+ }
+
+ nav ul li a{
+    color: black;
+    font-size: 14px;
+ }
+
+.select{
+    background-color: red;
+    padding: 20px , 30px ;
+    border-radius: 20px;
+
+}
+
+.nav-mod{
+height: 70px;
+box-shadow: 1px 1px 10px 0px black;
+background:white;
+border-radius: 50%;
+
+
+}
+
+.boton-menu{
+ width: 50px;
+ height: 50px;
+ background:red;
+ font-size: 20px;
+ cursor: pointer;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ border-radius: 50%;
+ transition: background 300ms ;
+ display: none;
+ 
+}
+
+
+
+.cover{
+    width:100%;
+    padding-bottom: 60px;
+    margin-top: 100px;
+    font-family:'ultra', sans-serif;
+}
+.container-cover{
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    }
+
+.container-informacion{
+        max-width: 400px;
+        margin-top: 40px;
+        z-index: 2;
+
+    }
+
+    .cover h1{
+        max-width: 400px;
+        font-size: 60px;
+        font-weight: 900;
+        color:red;
+    }
+    .cover h2{
+        font-size: 40px;
+        font-weight: 900;
+        color:black;
+        margin-top: -10px;
+
+    }
+
+    .cover p{
+        margin-top: 10px;
+        color: grey;
+    }
+
+    .cover input[type="button"]{
+        padding: 10px 20px;
+        margin-top: 10px;
+        font-size: 18px;
+        font-weight: 600;
+        border: none;
+        border-radius: 30px;
+        color:black;
+        background-color:red;
+        font-family:'poppins', sans-serif;
+        box-shadow: 1px 1px 30px -5px;
+        cursor: pointer;
+        transition: box-shadow 500ms;
+    
+
+    }
+    .container-vector{
+        position: relative;
+
+    }
+
+    .container-vector img {
+        position: absolute;
+        bottom:0px;
+        right: 0;
+        top: 60px;
+        width: 650px;
+        animation: movimiento 4s ease-in-out infinite;
+        transition:all 300ms;
+    }
+
+    @keyframes movimiento{
+        0%{
+            transform: translateY(10px);
+        }
+        25%{
+            transform: translateY(-10px);
+        
+    }100%{
+
+        transform:translateY(10px);
+    }
+
+}
+@media screen and (max-width:760px) {
+    
+ 
+    .container-vector img{
+        width: 500px;
+    }
+    
+}
+@media screen and (max-width:760ox ) {
+  
+     .container-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+  
+    .boton-menu{
+        display: flex;
+    }
+
+
+    nav{
+        height: 100%;
+        background: red;
+        position: fixed;
+        top: 0;
+        right:-180px;
+        padding: 0 40px;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+
+    nav ul li{
+        margin: 20px 0px;
+    }
+    .container-vector img{
+        transform: scale(0);
+        animation:none;
+    }
+
+}
+
+
+.main{
+    padding: 20px;
+}
+
+.main-title{
+    text-align: center;
+    margin: 3rem;
+    font-size: 3rem;
+}
+
+
+.iconos-menu{
+    font-size: 1.8rem;
+    display: block;
+    border: 1px solid black;
+    padding: 7px;
+    cursor:pointer;
+    }
+    .carousel-imagen{
+
+        display: block ;
+        width: 40%;
+        height: 10%;
+         margin:0 auto;
+         object-fit: cover;
+     }
+#cue{
+    width: 65%;
+    
+}
+
+/*ESTILOS DE PRODUCTO*/
+
+.container-productos{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 30px;
+}
+.producto{
+    border: 1px solid red;
+    padding: 20px;
+    text-align: center;
+}
+.producto-title{
+    text-align: center;
+
+}
+.producto-precio{
+    color: red;
+    font-weight: bold;
+}
+
+.producto-imagen{
+    width: 80%;
+    height: 350px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+ /* FOOTER */
+
+footer{
+    width: 100%;
+    padding: 50px 0px;
+    background-image:url(img/olas.svg) ;
+    background-size: cover;
+    background-color: rgb(228, 29, 29);
+ }
+
+    .container-footer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: auto;
+        margin-top: 100px;
+    }
+
+    .box-footer{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+   
+
+}
+ .box-footer .logo img{
+    width: 180px;
+ }
+
+ .box-footer .terminos{
+    max-width: 200px;
+    margin-top: 20px;
+    font-weight: 500;
+    color: black;
+    font-size:15px;
+ }
+ .box-footer h2{
+    margin-bottom: 30px;
+    color: black;
+    font-weight: 700;
+
+ }
+
+ .box-footer a {
+    margin-top: 10px;
+    color: black;
+    font-weight: 600;
+
+ }
+
+ .box-footer a:hover{
+    opacity:2;
+
+ }
+
+ .box-footer a .fab{
+    font-size: 30px;
+    color:red;
+ }
+ .box-copyright{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0 , 40px;
+ }
+
+ .box-copyright p{
+    margin-top: 20px;
+    color: black;
+
+ }
+
+ .box-copyright hr{
+    border:none ;
+    height:1px;
+    background-color: black;
+ }
